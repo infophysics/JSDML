@@ -1,4 +1,5 @@
-#		JSD/Neural Network Implementation										                        Nicholas Carrara	7/19/17
+#		JSD/Neural Network Implementation										             written by  Nicholas Carrara	7/19/17
+#												  (and including routines by Greg Ver Steeg (https://github.com/gregversteeg/NPEET))
 '''
 	This is an implementation of a neural network using Keras and for calculating the Jensen-Shannon divergence on a continuous
 	data set in N dimensions to compare with the neural network output which is typically one dimensional.  An example is included 
@@ -196,7 +197,7 @@ def discrete_JSD( signal, background, num_bins=50 ):
 	maximum = max(joint)
 	minimum = min(joint)
 	bin_range = maximum - minimum
-	bin_width = bin_range / 50
+	bin_width = bin_range / num_bins
 	bin_ranges = np.arange(minimum, maximum, bin_width)
 	sig_prob = list()
 	back_prob = list()
